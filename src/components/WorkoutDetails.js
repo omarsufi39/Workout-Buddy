@@ -8,7 +8,7 @@ function WorkoutDetails(props) {
     e.preventDefault();
 
     const response = await fetch(
-      "http://localhost:4000/api/workouts/" + workout._id,
+      "https://workoutbuddy-api-0ncp.onrender.com/api/workouts/" + workout._id,
       {
         method: "DELETE",
         body: JSON.stringify(workout),
