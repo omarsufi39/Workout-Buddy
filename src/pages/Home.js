@@ -18,7 +18,7 @@ function Home() {
       if (isAuthenticated) {
         async function fetchWorkouts() {
           const response = await fetch(
-            "https://workoutbuddy-q3zw.onrender.com/api/workouts/" +
+            "https://workoutbuddy-api-0ncp.onrender.com" +
               user.sub.split("|")[1]
           );
           const json = await response.json();

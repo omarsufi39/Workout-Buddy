@@ -15,13 +15,16 @@ function WorkoutForm() {
 
     const workout = { title, load, reps, userId };
 
-    const response = await fetch("http://localhost:4000/api/workouts/", {
-      method: "POST",
-      body: JSON.stringify(workout),
-      headers: {
-        "Content-type": "application/json",
-      },
-    });
+    const response = await fetch(
+      "https://workoutbuddy-api-0ncp.onrender.com/api/workouts/",
+      {
+        method: "POST",
+        body: JSON.stringify(workout),
+        headers: {
+          "Content-type": "application/json",
+        },
+      }
+    );
 
     const json = await response.json();
     if (!response.ok) {
