@@ -18,7 +18,8 @@ function Home() {
       if (isAuthenticated) {
         async function fetchWorkouts() {
           const response = await fetch(
-            "http://localhost:4000/api/workouts/" + user.sub.split("|")[1]
+            "https://workoutbuddy-q3zw.onrender.com/api/workouts/" +
+              user.sub.split("|")[1]
           );
           const json = await response.json();
           if (response.ok) {
